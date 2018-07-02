@@ -1,5 +1,5 @@
 ﻿/*
- * Autorius: Giedrius Kristinaitis IFF-7/2
+ * Autorius: Giedrius Kristinaitis
  * 8 Laboratorinis darbas
  */
 
@@ -12,10 +12,9 @@ using System;
 
 namespace L8_Kristinaitis {
 
-    public class Class1 {
+    public class Main {
 
-
-        // command method to draw net
+        // command method to draw a net
         [CommandMethod("Tinklelis")]
         public void Tinklelis() {
             Database db = HostApplicationServices.WorkingDatabase;
@@ -32,7 +31,7 @@ namespace L8_Kristinaitis {
             DrawNet(editor, corner, width, height);
         }
 
-        // method that draws net
+        // method that draws a net
         private void DrawNet(Editor editor, Point3d corner, double width, double height) {
             double horizontalDistance = width / 4;
             double verticalDistance = height / 9;
@@ -55,10 +54,7 @@ namespace L8_Kristinaitis {
             }
         }
 
-
-
-
-        // command method to draw rectangle
+        // command method to draw a rectangle
         [CommandMethod("Keturkampis")]
         public void Keturkampis() {
             Database db = HostApplicationServices.WorkingDatabase;
@@ -110,10 +106,7 @@ namespace L8_Kristinaitis {
             }
         }
 
-
-
-
-        // command method to draw wheel
+        // command method to draw a wheel
         [CommandMethod("Ratas")]
         public void Ratas() {
             Database db = HostApplicationServices.WorkingDatabase;
@@ -173,9 +166,6 @@ namespace L8_Kristinaitis {
             }
         }
 
-
-
-
         // command method to draw a face
         [CommandMethod("Veidas")]
         public void Apskritimas() {
@@ -224,9 +214,6 @@ namespace L8_Kristinaitis {
             editor.Command("-HATCH", center, "p", "s", "", "");
             editor.Command("-COLOR", "BYLAYER", "");
         }
-
-
-
 
         // method to get a double value
         private double GetDoubleValue(Editor editor, string message, bool negative, bool zero) {
